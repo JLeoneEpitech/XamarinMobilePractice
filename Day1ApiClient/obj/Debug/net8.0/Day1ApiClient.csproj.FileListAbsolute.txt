@@ -1,0 +1,15 @@
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\obj\Debug\net8.0\Day1ApiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\obj\Debug\net8.0\Day1ApiClient.AssemblyInfoInputs.cache
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\obj\Debug\net8.0\Day1ApiClient.AssemblyInfo.cs
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\obj\Debug\net8.0\Day1ApiClient.csproj.CoreCompileInputs.cache
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\obj\Debug\net8.0\Day1ApiClient.sourcelink.json
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\bin\Debug\net8.0\Day1ApiClient.exe
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\bin\Debug\net8.0\Day1ApiClient.deps.json
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\bin\Debug\net8.0\Day1ApiClient.runtimeconfig.json
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\bin\Debug\net8.0\Day1ApiClient.dll
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\bin\Debug\net8.0\Day1ApiClient.pdb
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\obj\Debug\net8.0\Day1ApiClient.dll
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\obj\Debug\net8.0\refint\Day1ApiClient.dll
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\obj\Debug\net8.0\Day1ApiClient.pdb
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\obj\Debug\net8.0\Day1ApiClient.genruntimeconfig.cache
+C:\Users\JLeon\Documents\Epitech\Personal Projects\XamarinMobilePractice\Day1ApiClient\obj\Debug\net8.0\ref\Day1ApiClient.dll
