@@ -1,0 +1,59 @@
+# --- Build results ---
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# --- User-specific files ---
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+
+# --- Visual Studio cache ---
+.vs/
+.vscode/
+
+# --- Xamarin / Mobile specific ---
+*.apk
+*.ap_ 
+*.aab
+*.ipa
+
+# --- NuGet packages ---
+*.nupkg
+*.snupkg
+packages/
+
+# --- Auto-generated assemblies (not committed) ---
+# Ignore ONLY inside build folders
+[Bb]in/**/*.dll
+[Oo]bj/**/*.dll
+[Bb]in/**/*.exe
+[Oo]bj/**/*.exe
+[Bb]in/**/*.class
+[Oo]bj/**/*.class
+[Bb]in/**/*.bin
+[Oo]bj/**/*.bin
+[Bb]in/**/*.props
+[Oo]bj/**/*.props
+
+# --- iOS/Mac specific ---
+*.dSYM
+*.app
+*.xcuserstate
+*.xcworkspace
+*.xcodeproj
+*.xcuserdatad
+
+# --- Other generated junk ---
+*.tmp
+*.cache
+*.bak
+
+*.props
