@@ -38,7 +38,7 @@ namespace XamarinPractice
             var client = new ApiClient();
             var postsFromApi = await client.GetAsync<Post>("https://jsonplaceholder.typicode.com/posts");
 
-            foreach (var post in postsFromApi)
+            foreach (var post in postsFromApi.Take(10)) //Limited to 10 to avoid lagging emulator
                 Posts.Add(post);
         }
 
@@ -46,7 +46,8 @@ namespace XamarinPractice
         {
             if (post != null)
             {
-                await Application.Current.MainPage.DisplayAlert(post.Title, post.Body, "OK");
+                await Application.Current.MainPage.Navigation.PushAsync(new PostDetailPage(post));
+                //await Application.Current.MainPage.DisplayAlert(post.Title, post.Body, "OK");
             }
         }
 

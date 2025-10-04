@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinPractice.PostDetailPage"
+             Title="{Binding Title}">
+
+
+
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="12">
+
+            <Label Text="{Binding Title}" FontSize="24" FontAttributes="Bold" LineBreakMode="WordWrap" />
+            <Label Text="{Binding Body}" FontSize="16" LineBreakMode="WordWrap" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
