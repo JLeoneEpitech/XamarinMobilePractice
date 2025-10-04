@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AFEFB4-3018-4643-A26B-8CBCF198BDF2}|XamarinPractice\\XamarinPractice\\XamarinPractice.csproj|c:\\users\\jleon\\source\\repos\\xamarinpractice\\xamarinpractice\\xamarinpractice\\postviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AFEFB4-3018-4643-A26B-8CBCF198BDF2}|XamarinPractice\\XamarinPractice\\XamarinPractice.csproj|solutionrelative:xamarinpractice\\xamarinpractice\\postviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AFEFB4-3018-4643-A26B-8CBCF198BDF2}|XamarinPractice\\XamarinPractice\\XamarinPractice.csproj|c:\\users\\jleon\\source\\repos\\xamarinpractice\\xamarinpractice\\xamarinpractice\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AFEFB4-3018-4643-A26B-8CBCF198BDF2}|XamarinPractice\\XamarinPractice\\XamarinPractice.csproj|solutionrelative:xamarinpractice\\xamarinpractice\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AFEFB4-3018-4643-A26B-8CBCF198BDF2}|XamarinPractice\\XamarinPractice\\XamarinPractice.csproj|c:\\users\\jleon\\source\\repos\\xamarinpractice\\xamarinpractice\\xamarinpractice\\mainpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{D7AFEFB4-3018-4643-A26B-8CBCF198BDF2}|XamarinPractice\\XamarinPractice\\XamarinPractice.csproj|solutionrelative:xamarinpractice\\xamarinpractice\\mainpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AFEFB4-3018-4643-A26B-8CBCF198BDF2}|XamarinPractice\\XamarinPractice\\XamarinPractice.csproj|c:\\users\\jleon\\source\\repos\\xamarinpractice\\xamarinpractice\\xamarinpractice\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AFEFB4-3018-4643-A26B-8CBCF198BDF2}|XamarinPractice\\XamarinPractice\\XamarinPractice.csproj|solutionrelative:xamarinpractice\\xamarinpractice\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AFEFB4-3018-4643-A26B-8CBCF198BDF2}|XamarinPractice\\XamarinPractice\\XamarinPractice.csproj|c:\\users\\jleon\\source\\repos\\xamarinpractice\\xamarinpractice\\xamarinpractice\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AFEFB4-3018-4643-A26B-8CBCF198BDF2}|XamarinPractice\\XamarinPractice\\XamarinPractice.csproj|solutionrelative:xamarinpractice\\xamarinpractice\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\XamarinPractice\\XamarinPractice\\MainPage.xaml",
+              "RelativeDocumentMoniker": "XamarinPractice\\XamarinPractice\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\XamarinPractice\\XamarinPractice\\MainPage.xaml",
+              "RelativeToolTip": "XamarinPractice\\XamarinPractice\\MainPage.xaml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-02T13:10:36.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\XamarinPractice\\XamarinPractice\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "XamarinPractice\\XamarinPractice\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\XamarinPractice\\XamarinPractice\\MainPage.xaml.cs",
+              "RelativeToolTip": "XamarinPractice\\XamarinPractice\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T13:16:09.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PostViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\XamarinPractice\\XamarinPractice\\PostViewModel.cs",
+              "RelativeDocumentMoniker": "XamarinPractice\\XamarinPractice\\PostViewModel.cs",
+              "ToolTip": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\XamarinPractice\\XamarinPractice\\PostViewModel.cs",
+              "RelativeToolTip": "XamarinPractice\\XamarinPractice\\PostViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T13:35:20.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\XamarinPractice\\XamarinPractice\\ApiClient.cs",
+              "RelativeDocumentMoniker": "XamarinPractice\\XamarinPractice\\ApiClient.cs",
+              "ToolTip": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\XamarinPractice\\XamarinPractice\\ApiClient.cs",
+              "RelativeToolTip": "XamarinPractice\\XamarinPractice\\ApiClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T13:26:29.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\XamarinPractice\\XamarinPractice\\Post.cs",
+              "RelativeDocumentMoniker": "XamarinPractice\\XamarinPractice\\Post.cs",
+              "ToolTip": "C:\\Users\\JLeon\\source\\repos\\XamarinPractice\\XamarinPractice\\XamarinPractice\\Post.cs",
+              "RelativeToolTip": "XamarinPractice\\XamarinPractice\\Post.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T13:37:45.232Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

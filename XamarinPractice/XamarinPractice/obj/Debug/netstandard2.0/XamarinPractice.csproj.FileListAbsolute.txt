@@ -13,3 +13,4 @@ C:\Users\JLeon\source\repos\XamarinPractice\XamarinPractice\XamarinPractice\obj\
 C:\Users\JLeon\source\repos\XamarinPractice\XamarinPractice\XamarinPractice\obj\Debug\netstandard2.0\XamarinPractice.dll
 C:\Users\JLeon\source\repos\XamarinPractice\XamarinPractice\XamarinPractice\obj\Debug\netstandard2.0\refint\XamarinPractice.dll
 C:\Users\JLeon\source\repos\XamarinPractice\XamarinPractice\XamarinPractice\obj\Debug\netstandard2.0\XamarinPractice.pdb
+C:\Users\JLeon\source\repos\XamarinPractice\XamarinPractice\XamarinPractice\obj\Debug\netstandard2.0\XamarinPractice.sourcelink.json

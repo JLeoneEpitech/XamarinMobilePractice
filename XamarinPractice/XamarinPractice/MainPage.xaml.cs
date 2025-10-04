@@ -13,21 +13,9 @@ namespace XamarinPractice
         public MainPage()
         {
             InitializeComponent();
-            var vm = new PostViewModel();
-            BindingContext = vm;
+            BindingContext = new PostViewModel();
+        }   
 
-            PostsListView.ItemTapped += async (s, e) =>
-            {
-                if (e.Item is string title)
-                {
-                    //récupère le body correspondant au titre envoyé de l'item qu'on selectionne
-                    var post = vm.PostsFromApi.Find(p => p.Title == Title);
-                    await DisplayAlert(title, post?.Body ?? "Aucun contenu", "ok");
-                }
-                ((ListView)s).SelectedItem = null; // Déselection
 
-            };
-
-        }
     }
 }

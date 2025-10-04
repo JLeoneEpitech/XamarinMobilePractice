@@ -1,11 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinPractice.MainPage">
+             xmlns:toolkit="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinPractice.MainPage"
+             Title="Liste des posts">
 
     <StackLayout Padding="20">
-        <Label Text="Liste des posts" FontSize="Medium" HorizontalOptions="Center" />
-        <ListView x:Name="PostsListView" ItemsSource="{Binding Posts}" />
-    </StackLayout>
 
+        <Label Text="Liste des posts"
+               FontSize="Medium"
+               HorizontalOptions="Center" />
+
+        <!-- ListView avec EventToCommandBehavior -->
+        <ListView x:Name="PostsListView"
+                  ItemsSource="{Binding Posts}"
+                  HasUnevenRows="True"
+                  SeparatorVisibility="Default"
+                  CachingStrategy="RecycleElement"
+                  SelectedItem="{Binding SelectedPost, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding .}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
 </ContentPage>
