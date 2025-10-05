@@ -33,14 +33,14 @@ namespace XamarinPractice
             };
 
             // TileLayer OpenTopoMap avec User-Agent
-            var topoLayer = new TileLayer(
-     new HttpTileSource(
-         new GlobalSphericalMercator(),
-         "https://tile.opentopomap.org/{z}/{x}/{y}.png",
-         name: "OpenTopoMap",
-         userAgent: "XamarinPractice/1.0 (+https://yourapp.example.com)"
-     )
- )
+             var topoLayer = new TileLayer(
+             new HttpTileSource(
+                 new GlobalSphericalMercator(),
+                 "https://tile.opentopomap.org/{z}/{x}/{y}.png",
+                 name: "OpenTopoMap",
+                 userAgent: "XamarinPractice/1.0 (+https://yourapp.example.com)"
+                 )
+             )  
             {
                 Name = "TopoMap"
             };
@@ -55,7 +55,7 @@ namespace XamarinPractice
             map.Home = n =>
             {
                 n.CenterOn(montpellier);
-                n.ZoomTo(2000);
+                n.ZoomTo(50);
             };
 
             MapView.Map = map;
@@ -63,21 +63,6 @@ namespace XamarinPractice
             // Ajoute les pins
             AddPins(map);
         }
-
-        private MPoint RandomPointNear(MPoint center, double radiusInMeters)
-        {
-            double radiusInDegrees = radiusInMeters / 111320.0;
-            double u = random.NextDouble();
-            double v = random.NextDouble();
-            double w = radiusInDegrees * Math.Sqrt(u);
-            double t = 2 * Math.PI * v;
-
-            double xOffset = w * Math.Cos(t);
-            double yOffset = w * Math.Sin(t);
-
-            return new MPoint(center.X + xOffset, center.Y + yOffset);
-        }
-
         private void AddPins(Map map)
         {
             var posts = new List<string>
@@ -88,40 +73,35 @@ namespace XamarinPractice
 
             var features = new List<IFeature>();
 
-            for (int i = 0; i < posts.Count; i++)
+            foreach (var post in posts)
             {
-                var randomPoint = RandomPointNear(montpellier, 1000);
+                var offsetX = (random.NextDouble() - 0.5) * 5000;
+                var offsetY = (random.NextDouble() - 0.5) * 5000;
 
-                // Convertit en NTS.Point pour la feature
-                var ntsPoint = new NetTopologySuite.Geometries.Point(randomPoint.X, randomPoint.Y);
+                var point = new NetTopologySuite.Geometries.Point(montpellier.X + offsetX, montpellier.Y + offsetY);
 
-                var feature = new GeometryFeature
-                {
-                    Geometry = ntsPoint
-                };
 
-                feature["Title"] = posts[i]; // titre du post
-
-                // Ajoute un style rouge
+                var feature = new GeometryFeature { Geometry = point };
                 feature.Styles.Add(new SymbolStyle
                 {
                     SymbolType = SymbolType.Ellipse,
-                    SymbolScale = 0.5,
-                    Fill = new Mapsui.Styles.Brush(Mapsui.Styles.Color.Red)
+                    SymbolScale = 0.8,
+                    // couleur : Mapsui.Styles.Color (si ta version réclame Brush, on corrigera)
+                    Fill = new Mapsui.Styles.Brush(Mapsui.Styles.Color.Red),  // <-- Brush avec Color
+
                 });
 
                 features.Add(feature);
             }
 
-            // Crée un seul provider avec toutes les features
-            var provider = new MemoryProvider(features);
-
-            var layer = new Layer("Posts")
+            var pinLayer = new MemoryLayer
             {
-                DataSource = provider
+                Name = "Posts",
+                Features = features   
             };
 
-            map.Layers.Add(layer);
+            map.Layers.Add(pinLayer);
+
         }
 
     }
