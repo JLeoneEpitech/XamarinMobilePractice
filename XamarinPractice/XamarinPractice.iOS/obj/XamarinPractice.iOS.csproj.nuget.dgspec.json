@@ -48,9 +48,18 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Mapsui.Forms": {
+              "target": "Package",
+              "version": "[4.1.9, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.4, )"
+            },
+            "System.Memory": {
+              "include": "None",
+              "target": "Package",
+              "version": "[4.5.4, )"
             },
             "Xamarin.CommunityToolkit": {
               "target": "Package",
@@ -61,6 +70,10 @@
               "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2662, )"
+            },
+            "Xamarin.Forms.Maps": {
               "target": "Package",
               "version": "[5.0.0.2662, )"
             }
@@ -129,6 +142,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Mapsui.Forms": {
+              "target": "Package",
+              "version": "[4.1.9, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -148,6 +165,10 @@
               "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2662, )"
+            },
+            "Xamarin.Forms.Maps": {
               "target": "Package",
               "version": "[5.0.0.2662, )"
             }

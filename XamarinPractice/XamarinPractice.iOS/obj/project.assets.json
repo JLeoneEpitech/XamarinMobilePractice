@@ -2,6 +2,287 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "BruTile/5.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BruTile.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BruTile.dll": {}
+        }
+      },
+      "ExCSS/4.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/ExCSS.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/ExCSS.dll": {}
+        }
+      },
+      "HarfBuzzSharp/7.3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "7.3.0.3"
+        },
+        "compile": {
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/7.3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/xamarinios1.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Headers/libHarfBuzzSharp.h": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Info.plist": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Modules/module.modulemap": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libHarfBuzzSharp.framework/_CodeSignature/CodeResources": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libHarfBuzzSharp.framework/libHarfBuzzSharp": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Headers/libHarfBuzzSharp.h": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Info.plist": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Modules/module.modulemap": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libHarfBuzzSharp.framework/_CodeSignature/CodeResources": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libHarfBuzzSharp.framework/libHarfBuzzSharp": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Linux/2.8.2.3": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "2.8.2.3"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-musl-x64/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          }
+        }
+      },
+      "Mapsui/4.1.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Mapsui.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.dll": {}
+        }
+      },
+      "Mapsui.Forms/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "BruTile": "[5.0.6, 6.0.0)",
+          "HarfBuzzSharp": "[7.3.0.3, 8.0.0)",
+          "Mapsui": "4.1.9",
+          "Mapsui.Rendering.Skia": "4.1.9",
+          "Mapsui.Tiling": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "SkiaSharp": "[2.88.9, 3.0.0)",
+          "SkiaSharp.HarfBuzz": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.Linux": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.iOS": "[2.88.9, 3.0.0)",
+          "SkiaSharp.Views": "[2.88.9, 3.0.0)",
+          "SkiaSharp.Views.Forms": "[2.88.9, 3.0.0)",
+          "Svg.Skia": "[1.0.0.3, 2.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "Topten.RichTextKit": "[0.4.166, 1.0.0)",
+          "Xamarin.Essentials": "[1.7.0, 2.0.0)",
+          "Xamarin.Forms": "[5.0.0.2545, 6.0.0)"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Mapsui.UI.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Mapsui.UI.Forms.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/Mapsui.Forms.targets": {}
+        }
+      },
+      "Mapsui.Nts/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "Mapsui": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Nts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Nts.dll": {}
+        }
+      },
+      "Mapsui.Rendering.Skia/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "[7.3.0.3, 8.0.0)",
+          "Mapsui": "4.1.9",
+          "Mapsui.Nts": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "SkiaSharp": "[2.88.9, 3.0.0)",
+          "SkiaSharp.HarfBuzz": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.Linux": "[2.88.9, 3.0.0)",
+          "Svg.Skia": "[1.0.0.3, 2.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "Topten.RichTextKit": "[0.4.166, 1.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Rendering.Skia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Rendering.Skia.dll": {}
+        }
+      },
+      "Mapsui.Tiling/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "BruTile": "[5.0.6, 6.0.0)",
+          "Mapsui": "4.1.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Tiling.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.GeoJSON4STJ/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.1.0, 3.0.0-A)",
+          "System.Text.Json": "6.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -15,6 +296,221 @@
           }
         }
       },
+      "ShimSkiaSharp/1.0.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ShimSkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ShimSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "2.88.9"
+        },
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.3",
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/2.88.9": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/xamarinios1.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/ios/native/libSkiaSharp.framework/Info.plist": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libSkiaSharp.framework/_CodeSignature/CodeResources": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libSkiaSharp.framework/libSkiaSharp": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/iossimulator/native/libSkiaSharp.framework/Info.plist": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libSkiaSharp.framework/_CodeSignature/CodeResources": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libSkiaSharp.framework/libSkiaSharp": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-musl-x64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          }
+        }
+      },
+      "SkiaSharp.Views/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Forms/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.Views": "2.88.9",
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Svg.Custom/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "ExCSS": "4.2.3",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Custom.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Custom.dll": {}
+        }
+      },
+      "Svg.Model/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "ShimSkiaSharp": "1.0.0.3",
+          "Svg.Custom": "1.0.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Model.dll": {}
+        }
+      },
+      "Svg.Skia/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.6",
+          "SkiaSharp.HarfBuzz": "2.88.6",
+          "Svg.Custom": "1.0.0.3",
+          "Svg.Model": "1.0.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Skia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Skia.dll": {}
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -22,6 +518,103 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Json/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Topten.RichTextKit/0.4.166": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Linux": "2.8.2.3",
+          "SkiaSharp": "2.88.3",
+          "SkiaSharp.HarfBuzz": "2.88.3",
+          "SkiaSharp.NativeAssets.Linux": "2.88.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Xamarin.CommunityToolkit/2.0.6": {
@@ -203,14 +796,34 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/5.0.0.2662": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2662"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "XamarinPractice/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Mapsui.Forms": "4.1.9",
           "Newtonsoft.Json": "13.0.4",
           "Xamarin.CommunityToolkit": "2.0.6",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2662"
+          "Xamarin.Forms": "5.0.0.2662",
+          "Xamarin.Forms.Maps": "5.0.0.2662"
         },
         "compile": {
           "bin/placeholder/XamarinPractice.dll": {}
@@ -221,6 +834,227 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "BruTile/5.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BruTile.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BruTile.dll": {}
+        }
+      },
+      "ExCSS/4.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/ExCSS.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/ExCSS.dll": {}
+        }
+      },
+      "HarfBuzzSharp/7.3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "7.3.0.3"
+        },
+        "compile": {
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/7.3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/xamarinios1.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Linux/2.8.2.3": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "2.8.2.3"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "Mapsui/4.1.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Mapsui.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.dll": {}
+        }
+      },
+      "Mapsui.Forms/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "BruTile": "[5.0.6, 6.0.0)",
+          "HarfBuzzSharp": "[7.3.0.3, 8.0.0)",
+          "Mapsui": "4.1.9",
+          "Mapsui.Rendering.Skia": "4.1.9",
+          "Mapsui.Tiling": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "SkiaSharp": "[2.88.9, 3.0.0)",
+          "SkiaSharp.HarfBuzz": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.Linux": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.iOS": "[2.88.9, 3.0.0)",
+          "SkiaSharp.Views": "[2.88.9, 3.0.0)",
+          "SkiaSharp.Views.Forms": "[2.88.9, 3.0.0)",
+          "Svg.Skia": "[1.0.0.3, 2.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "Topten.RichTextKit": "[0.4.166, 1.0.0)",
+          "Xamarin.Essentials": "[1.7.0, 2.0.0)",
+          "Xamarin.Forms": "[5.0.0.2545, 6.0.0)"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Mapsui.UI.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Mapsui.UI.Forms.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/Mapsui.Forms.targets": {}
+        }
+      },
+      "Mapsui.Nts/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "Mapsui": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Nts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Nts.dll": {}
+        }
+      },
+      "Mapsui.Rendering.Skia/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "[7.3.0.3, 8.0.0)",
+          "Mapsui": "4.1.9",
+          "Mapsui.Nts": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "SkiaSharp": "[2.88.9, 3.0.0)",
+          "SkiaSharp.HarfBuzz": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.Linux": "[2.88.9, 3.0.0)",
+          "Svg.Skia": "[1.0.0.3, 2.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "Topten.RichTextKit": "[0.4.166, 1.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Rendering.Skia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Rendering.Skia.dll": {}
+        }
+      },
+      "Mapsui.Tiling/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "BruTile": "[5.0.6, 6.0.0)",
+          "Mapsui": "4.1.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Tiling.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.GeoJSON4STJ/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.1.0, 3.0.0-A)",
+          "System.Text.Json": "6.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -234,6 +1068,177 @@
           }
         }
       },
+      "ShimSkiaSharp/1.0.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ShimSkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ShimSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "2.88.9"
+        },
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.3",
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/2.88.9": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/xamarinios1.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "SkiaSharp.Views/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Forms/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.Views": "2.88.9",
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Svg.Custom/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "ExCSS": "4.2.3",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Custom.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Custom.dll": {}
+        }
+      },
+      "Svg.Model/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "ShimSkiaSharp": "1.0.0.3",
+          "Svg.Custom": "1.0.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Model.dll": {}
+        }
+      },
+      "Svg.Skia/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.6",
+          "SkiaSharp.HarfBuzz": "2.88.6",
+          "Svg.Custom": "1.0.0.3",
+          "Svg.Model": "1.0.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Skia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Skia.dll": {}
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -241,6 +1246,103 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Json/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Topten.RichTextKit/0.4.166": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Linux": "2.8.2.3",
+          "SkiaSharp": "2.88.3",
+          "SkiaSharp.HarfBuzz": "2.88.3",
+          "SkiaSharp.NativeAssets.Linux": "2.88.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Xamarin.CommunityToolkit/2.0.6": {
@@ -422,14 +1524,34 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/5.0.0.2662": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2662"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "XamarinPractice/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Mapsui.Forms": "4.1.9",
           "Newtonsoft.Json": "13.0.4",
           "Xamarin.CommunityToolkit": "2.0.6",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2662"
+          "Xamarin.Forms": "5.0.0.2662",
+          "Xamarin.Forms.Maps": "5.0.0.2662"
         },
         "compile": {
           "bin/placeholder/XamarinPractice.dll": {}
@@ -440,6 +1562,227 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-arm64": {
+      "BruTile/5.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BruTile.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BruTile.dll": {}
+        }
+      },
+      "ExCSS/4.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/ExCSS.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/ExCSS.dll": {}
+        }
+      },
+      "HarfBuzzSharp/7.3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "7.3.0.3"
+        },
+        "compile": {
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/7.3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/xamarinios1.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Linux/2.8.2.3": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "2.8.2.3"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "Mapsui/4.1.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Mapsui.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.dll": {}
+        }
+      },
+      "Mapsui.Forms/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "BruTile": "[5.0.6, 6.0.0)",
+          "HarfBuzzSharp": "[7.3.0.3, 8.0.0)",
+          "Mapsui": "4.1.9",
+          "Mapsui.Rendering.Skia": "4.1.9",
+          "Mapsui.Tiling": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "SkiaSharp": "[2.88.9, 3.0.0)",
+          "SkiaSharp.HarfBuzz": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.Linux": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.iOS": "[2.88.9, 3.0.0)",
+          "SkiaSharp.Views": "[2.88.9, 3.0.0)",
+          "SkiaSharp.Views.Forms": "[2.88.9, 3.0.0)",
+          "Svg.Skia": "[1.0.0.3, 2.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "Topten.RichTextKit": "[0.4.166, 1.0.0)",
+          "Xamarin.Essentials": "[1.7.0, 2.0.0)",
+          "Xamarin.Forms": "[5.0.0.2545, 6.0.0)"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Mapsui.UI.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Mapsui.UI.Forms.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/Mapsui.Forms.targets": {}
+        }
+      },
+      "Mapsui.Nts/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "Mapsui": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Nts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Nts.dll": {}
+        }
+      },
+      "Mapsui.Rendering.Skia/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "[7.3.0.3, 8.0.0)",
+          "Mapsui": "4.1.9",
+          "Mapsui.Nts": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "SkiaSharp": "[2.88.9, 3.0.0)",
+          "SkiaSharp.HarfBuzz": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.Linux": "[2.88.9, 3.0.0)",
+          "Svg.Skia": "[1.0.0.3, 2.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "Topten.RichTextKit": "[0.4.166, 1.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Rendering.Skia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Rendering.Skia.dll": {}
+        }
+      },
+      "Mapsui.Tiling/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "BruTile": "[5.0.6, 6.0.0)",
+          "Mapsui": "4.1.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Tiling.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.GeoJSON4STJ/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.1.0, 3.0.0-A)",
+          "System.Text.Json": "6.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -453,6 +1796,177 @@
           }
         }
       },
+      "ShimSkiaSharp/1.0.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ShimSkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ShimSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "2.88.9"
+        },
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.3",
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/2.88.9": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/xamarinios1.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "SkiaSharp.Views/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Forms/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.Views": "2.88.9",
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Svg.Custom/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "ExCSS": "4.2.3",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Custom.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Custom.dll": {}
+        }
+      },
+      "Svg.Model/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "ShimSkiaSharp": "1.0.0.3",
+          "Svg.Custom": "1.0.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Model.dll": {}
+        }
+      },
+      "Svg.Skia/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.6",
+          "SkiaSharp.HarfBuzz": "2.88.6",
+          "Svg.Custom": "1.0.0.3",
+          "Svg.Model": "1.0.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Skia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Skia.dll": {}
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -460,6 +1974,103 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Json/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Topten.RichTextKit/0.4.166": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Linux": "2.8.2.3",
+          "SkiaSharp": "2.88.3",
+          "SkiaSharp.HarfBuzz": "2.88.3",
+          "SkiaSharp.NativeAssets.Linux": "2.88.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Xamarin.CommunityToolkit/2.0.6": {
@@ -641,14 +2252,34 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/5.0.0.2662": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2662"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "XamarinPractice/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Mapsui.Forms": "4.1.9",
           "Newtonsoft.Json": "13.0.4",
           "Xamarin.CommunityToolkit": "2.0.6",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2662"
+          "Xamarin.Forms": "5.0.0.2662",
+          "Xamarin.Forms.Maps": "5.0.0.2662"
         },
         "compile": {
           "bin/placeholder/XamarinPractice.dll": {}
@@ -659,6 +2290,227 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "BruTile/5.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BruTile.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BruTile.dll": {}
+        }
+      },
+      "ExCSS/4.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/ExCSS.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/ExCSS.dll": {}
+        }
+      },
+      "HarfBuzzSharp/7.3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "7.3.0.3"
+        },
+        "compile": {
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/7.3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/xamarinios1.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Linux/2.8.2.3": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "2.8.2.3"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "Mapsui/4.1.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Mapsui.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.dll": {}
+        }
+      },
+      "Mapsui.Forms/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "BruTile": "[5.0.6, 6.0.0)",
+          "HarfBuzzSharp": "[7.3.0.3, 8.0.0)",
+          "Mapsui": "4.1.9",
+          "Mapsui.Rendering.Skia": "4.1.9",
+          "Mapsui.Tiling": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "SkiaSharp": "[2.88.9, 3.0.0)",
+          "SkiaSharp.HarfBuzz": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.Linux": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.iOS": "[2.88.9, 3.0.0)",
+          "SkiaSharp.Views": "[2.88.9, 3.0.0)",
+          "SkiaSharp.Views.Forms": "[2.88.9, 3.0.0)",
+          "Svg.Skia": "[1.0.0.3, 2.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "Topten.RichTextKit": "[0.4.166, 1.0.0)",
+          "Xamarin.Essentials": "[1.7.0, 2.0.0)",
+          "Xamarin.Forms": "[5.0.0.2545, 6.0.0)"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Mapsui.UI.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Mapsui.UI.Forms.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/Mapsui.Forms.targets": {}
+        }
+      },
+      "Mapsui.Nts/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "Mapsui": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Nts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Nts.dll": {}
+        }
+      },
+      "Mapsui.Rendering.Skia/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "[7.3.0.3, 8.0.0)",
+          "Mapsui": "4.1.9",
+          "Mapsui.Nts": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "SkiaSharp": "[2.88.9, 3.0.0)",
+          "SkiaSharp.HarfBuzz": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.Linux": "[2.88.9, 3.0.0)",
+          "Svg.Skia": "[1.0.0.3, 2.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "Topten.RichTextKit": "[0.4.166, 1.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Rendering.Skia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Rendering.Skia.dll": {}
+        }
+      },
+      "Mapsui.Tiling/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "BruTile": "[5.0.6, 6.0.0)",
+          "Mapsui": "4.1.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Tiling.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.GeoJSON4STJ/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.1.0, 3.0.0-A)",
+          "System.Text.Json": "6.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -672,6 +2524,177 @@
           }
         }
       },
+      "ShimSkiaSharp/1.0.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ShimSkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ShimSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "2.88.9"
+        },
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.3",
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/2.88.9": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/xamarinios1.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "SkiaSharp.Views/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Forms/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.Views": "2.88.9",
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Svg.Custom/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "ExCSS": "4.2.3",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Custom.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Custom.dll": {}
+        }
+      },
+      "Svg.Model/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "ShimSkiaSharp": "1.0.0.3",
+          "Svg.Custom": "1.0.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Model.dll": {}
+        }
+      },
+      "Svg.Skia/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.6",
+          "SkiaSharp.HarfBuzz": "2.88.6",
+          "Svg.Custom": "1.0.0.3",
+          "Svg.Model": "1.0.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Skia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Skia.dll": {}
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -679,6 +2702,103 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Json/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Topten.RichTextKit/0.4.166": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Linux": "2.8.2.3",
+          "SkiaSharp": "2.88.3",
+          "SkiaSharp.HarfBuzz": "2.88.3",
+          "SkiaSharp.NativeAssets.Linux": "2.88.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Xamarin.CommunityToolkit/2.0.6": {
@@ -860,14 +2980,34 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/5.0.0.2662": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2662"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "XamarinPractice/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Mapsui.Forms": "4.1.9",
           "Newtonsoft.Json": "13.0.4",
           "Xamarin.CommunityToolkit": "2.0.6",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2662"
+          "Xamarin.Forms": "5.0.0.2662",
+          "Xamarin.Forms.Maps": "5.0.0.2662"
         },
         "compile": {
           "bin/placeholder/XamarinPractice.dll": {}
@@ -878,6 +3018,227 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "BruTile/5.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BruTile.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BruTile.dll": {}
+        }
+      },
+      "ExCSS/4.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/ExCSS.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/ExCSS.dll": {}
+        }
+      },
+      "HarfBuzzSharp/7.3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "7.3.0.3"
+        },
+        "compile": {
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/7.3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/xamarinios1.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Linux/2.8.2.3": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "2.8.2.3"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "Mapsui/4.1.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Mapsui.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.dll": {}
+        }
+      },
+      "Mapsui.Forms/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "BruTile": "[5.0.6, 6.0.0)",
+          "HarfBuzzSharp": "[7.3.0.3, 8.0.0)",
+          "Mapsui": "4.1.9",
+          "Mapsui.Rendering.Skia": "4.1.9",
+          "Mapsui.Tiling": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "SkiaSharp": "[2.88.9, 3.0.0)",
+          "SkiaSharp.HarfBuzz": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.Linux": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.iOS": "[2.88.9, 3.0.0)",
+          "SkiaSharp.Views": "[2.88.9, 3.0.0)",
+          "SkiaSharp.Views.Forms": "[2.88.9, 3.0.0)",
+          "Svg.Skia": "[1.0.0.3, 2.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "Topten.RichTextKit": "[0.4.166, 1.0.0)",
+          "Xamarin.Essentials": "[1.7.0, 2.0.0)",
+          "Xamarin.Forms": "[5.0.0.2545, 6.0.0)"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Mapsui.UI.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Mapsui.UI.Forms.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/Mapsui.Forms.targets": {}
+        }
+      },
+      "Mapsui.Nts/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "Mapsui": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Nts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Nts.dll": {}
+        }
+      },
+      "Mapsui.Rendering.Skia/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "[7.3.0.3, 8.0.0)",
+          "Mapsui": "4.1.9",
+          "Mapsui.Nts": "4.1.9",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "NetTopologySuite": "[2.5.0, 3.0.0)",
+          "NetTopologySuite.IO.GeoJSON4STJ": "[4.0.0, 5.0.0)",
+          "SkiaSharp": "[2.88.9, 3.0.0)",
+          "SkiaSharp.HarfBuzz": "[2.88.9, 3.0.0)",
+          "SkiaSharp.NativeAssets.Linux": "[2.88.9, 3.0.0)",
+          "Svg.Skia": "[1.0.0.3, 2.0.0)",
+          "System.Memory": "[4.5.5, 5.0.0)",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "Topten.RichTextKit": "[0.4.166, 1.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Rendering.Skia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Rendering.Skia.dll": {}
+        }
+      },
+      "Mapsui.Tiling/4.1.9": {
+        "type": "package",
+        "dependencies": {
+          "BruTile": "[5.0.6, 6.0.0)",
+          "Mapsui": "4.1.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/Mapsui.Tiling.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.GeoJSON4STJ/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)",
+          "NetTopologySuite.Features": "[2.1.0, 3.0.0-A)",
+          "System.Text.Json": "6.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -891,6 +3252,177 @@
           }
         }
       },
+      "ShimSkiaSharp/1.0.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ShimSkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ShimSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "2.88.9"
+        },
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.3",
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/2.88.9": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/xamarinios1.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "SkiaSharp.Views/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Forms/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.Views": "2.88.9",
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Svg.Custom/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "ExCSS": "4.2.3",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Custom.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Custom.dll": {}
+        }
+      },
+      "Svg.Model/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "ShimSkiaSharp": "1.0.0.3",
+          "Svg.Custom": "1.0.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Model.dll": {}
+        }
+      },
+      "Svg.Skia/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.6",
+          "SkiaSharp.HarfBuzz": "2.88.6",
+          "Svg.Custom": "1.0.0.3",
+          "Svg.Model": "1.0.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Svg.Skia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Svg.Skia.dll": {}
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -898,6 +3430,103 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Json/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Topten.RichTextKit/0.4.166": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Linux": "2.8.2.3",
+          "SkiaSharp": "2.88.3",
+          "SkiaSharp.HarfBuzz": "2.88.3",
+          "SkiaSharp.NativeAssets.Linux": "2.88.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Xamarin.CommunityToolkit/2.0.6": {
@@ -1079,14 +3708,34 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/5.0.0.2662": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2662"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "XamarinPractice/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Mapsui.Forms": "4.1.9",
           "Newtonsoft.Json": "13.0.4",
           "Xamarin.CommunityToolkit": "2.0.6",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2662"
+          "Xamarin.Forms": "5.0.0.2662",
+          "Xamarin.Forms.Maps": "5.0.0.2662"
         },
         "compile": {
           "bin/placeholder/XamarinPractice.dll": {}
@@ -1098,6 +3747,307 @@
     }
   },
   "libraries": {
+    "BruTile/5.0.6": {
+      "sha512": "JsPmrvFy6rZFH8Q3nHSi+wu8og93hqmnzL+6EhiznHU42yB8LETgeZWPZCfSCUTdMP3JrnwxCQ1UUXYEHhaWww==",
+      "type": "package",
+      "path": "brutile/5.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "brutile.5.0.6.nupkg.sha512",
+        "brutile.nuspec",
+        "brutile.png",
+        "lib/net6.0/BruTile.dll",
+        "lib/netstandard2.0/BruTile.dll",
+        "license.txt"
+      ]
+    },
+    "ExCSS/4.2.3": {
+      "sha512": "SyeAfu2wL5247sipJoPUzQfjiwQtfSd8hN4IbgoyVcDx4PP6Dud4znwPRibWQzLtTlUxYYcbf5f4p+EfFC7KtQ==",
+      "type": "package",
+      "path": "excss/4.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "excss.4.2.3.nupkg.sha512",
+        "excss.nuspec",
+        "lib/net48/ExCSS.dll",
+        "lib/net6.0/ExCSS.dll",
+        "lib/net7.0/ExCSS.dll",
+        "lib/netcoreapp3.1/ExCSS.dll",
+        "lib/netstandard2.0/ExCSS.dll",
+        "lib/netstandard2.1/ExCSS.dll",
+        "readme.md"
+      ]
+    },
+    "HarfBuzzSharp/7.3.0.3": {
+      "sha512": "Hq+5+gx10coOvuRgB13KBwiWxJq1QeYuhtVLbA01ZCWaugOnolUahF44KvrQTUUHDNk/C7HB6SMaebsZeOdhgg==",
+      "type": "package",
+      "path": "harfbuzzsharp/7.3.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "harfbuzzsharp.7.3.0.3.nupkg.sha512",
+        "harfbuzzsharp.nuspec",
+        "lib/monoandroid1.0/HarfBuzzSharp.dll",
+        "lib/monoandroid1.0/HarfBuzzSharp.pdb",
+        "lib/monoandroid1.0/HarfBuzzSharp.xml",
+        "lib/net462/HarfBuzzSharp.dll",
+        "lib/net462/HarfBuzzSharp.pdb",
+        "lib/net462/HarfBuzzSharp.xml",
+        "lib/net6.0-android30.0/HarfBuzzSharp.dll",
+        "lib/net6.0-android30.0/HarfBuzzSharp.pdb",
+        "lib/net6.0-android30.0/HarfBuzzSharp.xml",
+        "lib/net6.0-ios13.6/HarfBuzzSharp.dll",
+        "lib/net6.0-ios13.6/HarfBuzzSharp.pdb",
+        "lib/net6.0-ios13.6/HarfBuzzSharp.xml",
+        "lib/net6.0-maccatalyst13.5/HarfBuzzSharp.dll",
+        "lib/net6.0-maccatalyst13.5/HarfBuzzSharp.pdb",
+        "lib/net6.0-maccatalyst13.5/HarfBuzzSharp.xml",
+        "lib/net6.0-macos10.15/HarfBuzzSharp.dll",
+        "lib/net6.0-macos10.15/HarfBuzzSharp.pdb",
+        "lib/net6.0-macos10.15/HarfBuzzSharp.xml",
+        "lib/net6.0-tvos13.4/HarfBuzzSharp.dll",
+        "lib/net6.0-tvos13.4/HarfBuzzSharp.pdb",
+        "lib/net6.0-tvos13.4/HarfBuzzSharp.xml",
+        "lib/net6.0/HarfBuzzSharp.dll",
+        "lib/net6.0/HarfBuzzSharp.pdb",
+        "lib/net6.0/HarfBuzzSharp.xml",
+        "lib/netcoreapp3.1/HarfBuzzSharp.dll",
+        "lib/netcoreapp3.1/HarfBuzzSharp.pdb",
+        "lib/netcoreapp3.1/HarfBuzzSharp.xml",
+        "lib/netstandard1.3/HarfBuzzSharp.dll",
+        "lib/netstandard1.3/HarfBuzzSharp.pdb",
+        "lib/netstandard1.3/HarfBuzzSharp.xml",
+        "lib/netstandard2.0/HarfBuzzSharp.dll",
+        "lib/netstandard2.0/HarfBuzzSharp.pdb",
+        "lib/netstandard2.0/HarfBuzzSharp.xml",
+        "lib/netstandard2.1/HarfBuzzSharp.dll",
+        "lib/netstandard2.1/HarfBuzzSharp.pdb",
+        "lib/netstandard2.1/HarfBuzzSharp.xml",
+        "lib/tizen40/HarfBuzzSharp.dll",
+        "lib/tizen40/HarfBuzzSharp.pdb",
+        "lib/tizen40/HarfBuzzSharp.xml",
+        "lib/uap10.0.10240/HarfBuzzSharp.dll",
+        "lib/uap10.0.10240/HarfBuzzSharp.pdb",
+        "lib/uap10.0.10240/HarfBuzzSharp.xml",
+        "lib/uap10.0.16299/HarfBuzzSharp.dll",
+        "lib/uap10.0.16299/HarfBuzzSharp.pdb",
+        "lib/uap10.0.16299/HarfBuzzSharp.xml",
+        "lib/xamarinios1.0/HarfBuzzSharp.dll",
+        "lib/xamarinios1.0/HarfBuzzSharp.pdb",
+        "lib/xamarinios1.0/HarfBuzzSharp.xml",
+        "lib/xamarinmac2.0/HarfBuzzSharp.dll",
+        "lib/xamarinmac2.0/HarfBuzzSharp.pdb",
+        "lib/xamarinmac2.0/HarfBuzzSharp.xml",
+        "lib/xamarintvos1.0/HarfBuzzSharp.dll",
+        "lib/xamarintvos1.0/HarfBuzzSharp.pdb",
+        "lib/xamarintvos1.0/HarfBuzzSharp.xml",
+        "lib/xamarinwatchos1.0/HarfBuzzSharp.dll",
+        "lib/xamarinwatchos1.0/HarfBuzzSharp.pdb",
+        "lib/xamarinwatchos1.0/HarfBuzzSharp.xml"
+      ]
+    },
+    "HarfBuzzSharp.NativeAssets.iOS/7.3.0.3": {
+      "sha512": "nUz7053Q+qS+HzQkBaKcSu5HvKsVmwc6/DsAoAnVpSoKhZHb23nrk7ziWK5fJknuHiQItxJCL/yczpBQR1RMVg==",
+      "type": "package",
+      "path": "harfbuzzsharp.nativeassets.ios/7.3.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net6.0-ios13.6/HarfBuzzSharp.NativeAssets.iOS.targets",
+        "build/xamarinios1.0/HarfBuzzSharp.NativeAssets.iOS.targets",
+        "buildTransitive/net6.0-ios13.6/HarfBuzzSharp.NativeAssets.iOS.targets",
+        "buildTransitive/xamarinios1.0/HarfBuzzSharp.NativeAssets.iOS.targets",
+        "harfbuzzsharp.nativeassets.ios.7.3.0.3.nupkg.sha512",
+        "harfbuzzsharp.nativeassets.ios.nuspec",
+        "lib/net6.0-ios13.6/_._",
+        "lib/xamarinios1.0/_._",
+        "runtimes/ios/native/libHarfBuzzSharp.framework/Headers/libHarfBuzzSharp.h",
+        "runtimes/ios/native/libHarfBuzzSharp.framework/Info.plist",
+        "runtimes/ios/native/libHarfBuzzSharp.framework/Modules/module.modulemap",
+        "runtimes/ios/native/libHarfBuzzSharp.framework/_CodeSignature/CodeResources",
+        "runtimes/ios/native/libHarfBuzzSharp.framework/libHarfBuzzSharp",
+        "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Headers/libHarfBuzzSharp.h",
+        "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Info.plist",
+        "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Modules/module.modulemap",
+        "runtimes/iossimulator/native/libHarfBuzzSharp.framework/_CodeSignature/CodeResources",
+        "runtimes/iossimulator/native/libHarfBuzzSharp.framework/libHarfBuzzSharp"
+      ]
+    },
+    "HarfBuzzSharp.NativeAssets.Linux/2.8.2.3": {
+      "sha512": "Qu1yJSHEN7PD3+fqfkaClnORWN5e2xJ2Xoziz/GUi/oBT1Z+Dp2oZeiONKP6NFltboSOBkvH90QuOA6YN/U1zg==",
+      "type": "package",
+      "path": "harfbuzzsharp.nativeassets.linux/2.8.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/HarfBuzzSharp.NativeAssets.Linux.targets",
+        "buildTransitive/net462/HarfBuzzSharp.NativeAssets.Linux.targets",
+        "harfbuzzsharp.nativeassets.linux.2.8.2.3.nupkg.sha512",
+        "harfbuzzsharp.nativeassets.linux.nuspec",
+        "lib/net462/_._",
+        "lib/net5.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "runtimes/linux-arm/native/libHarfBuzzSharp.so",
+        "runtimes/linux-arm64/native/libHarfBuzzSharp.so",
+        "runtimes/linux-musl-x64/native/libHarfBuzzSharp.so",
+        "runtimes/linux-x64/native/libHarfBuzzSharp.so"
+      ]
+    },
+    "Mapsui/4.1.9": {
+      "sha512": "C+PueUr1PtjGtJ7JdHiZVF7lRfebr6jD1EhS1W0eq7rISFj51U5PGhflEeaocv1N3gJb7iqldrAbmX8GpY4+6A==",
+      "type": "package",
+      "path": "mapsui/4.1.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net6.0/Mapsui.dll",
+        "lib/netstandard2.0/Mapsui.dll",
+        "lib/netstandard2.1/Mapsui.dll",
+        "mapsui.4.1.9.nupkg.sha512",
+        "mapsui.nuspec"
+      ]
+    },
+    "Mapsui.Forms/4.1.9": {
+      "sha512": "GJuK/NxzOH9thHFyHvHv5WmoOMe4z5jn6aAiKJbuzOxZdwulyMBVxDFwTf4ltsTEdVuXCp2PCuzOOQ7gVQqwpA==",
+      "type": "package",
+      "path": "mapsui.forms/4.1.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/xamarinios1.0/Mapsui.Forms.targets",
+        "icon.png",
+        "lib/netstandard2.0/Mapsui.UI.Forms.dll",
+        "lib/netstandard2.1/Mapsui.UI.Forms.dll",
+        "lib/xamarinios10/Mapsui.UI.Forms.dll",
+        "mapsui.forms.4.1.9.nupkg.sha512",
+        "mapsui.forms.nuspec"
+      ]
+    },
+    "Mapsui.Nts/4.1.9": {
+      "sha512": "bnNKg/cIafxj1VenxjBiX3QWUradfisqvg88CQbO+X06y4GM1NsAQtY4Q8AspCC1R2cn1/mLzEJjASnRSAws7g==",
+      "type": "package",
+      "path": "mapsui.nts/4.1.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net6.0/Mapsui.Nts.dll",
+        "lib/netstandard2.0/Mapsui.Nts.dll",
+        "lib/netstandard2.1/Mapsui.Nts.dll",
+        "mapsui.nts.4.1.9.nupkg.sha512",
+        "mapsui.nts.nuspec"
+      ]
+    },
+    "Mapsui.Rendering.Skia/4.1.9": {
+      "sha512": "XG+m+NR5pjyx/sZnqNFwVKVY/+aPOdk+i4Z3O/mttkkzulFAxOO1mX53/0L0bAAHh5DcemXUD8xhgPNV75NuQg==",
+      "type": "package",
+      "path": "mapsui.rendering.skia/4.1.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net6.0/Mapsui.Rendering.Skia.dll",
+        "lib/netstandard2.0/Mapsui.Rendering.Skia.dll",
+        "lib/netstandard2.1/Mapsui.Rendering.Skia.dll",
+        "mapsui.rendering.skia.4.1.9.nupkg.sha512",
+        "mapsui.rendering.skia.nuspec"
+      ]
+    },
+    "Mapsui.Tiling/4.1.9": {
+      "sha512": "k3D3ERv7/S3vMRYpfviqzFtV98/aCae5bNdjwEKZne9eK1GXPZhp5c9wy29iXb6+DZyDAI1SRvEodIH2R2+bug==",
+      "type": "package",
+      "path": "mapsui.tiling/4.1.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net6.0/Mapsui.Tiling.dll",
+        "lib/netstandard2.0/Mapsui.Tiling.dll",
+        "lib/netstandard2.1/Mapsui.Tiling.dll",
+        "mapsui.tiling.4.1.9.nupkg.sha512",
+        "mapsui.tiling.nuspec"
+      ]
+    },
+    "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "sha512": "3aeMZ1N0lJoSyzqiP03hqemtb1BijhsJADdobn/4nsMJ8V1H+CrpuduUe4hlRdx+ikBQju1VGjMD1GJ3Sk05Eg==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Bcl.AsyncInterfaces.targets",
+        "buildTransitive/net462/_._",
+        "lib/net462/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net462/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "NetTopologySuite/2.5.0": {
+      "sha512": "5/+2O2ADomEdUn09mlSigACdqvAf0m/pVPGtIPEPQWnyrVykYY0NlfXLIdkMgi41kvH9kNrPqYaFBTZtHYH7Xw==",
+      "type": "package",
+      "path": "nettopologysuite/2.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/NetTopologySuite.dll",
+        "lib/netstandard2.0/NetTopologySuite.xml",
+        "nettopologysuite.2.5.0.nupkg.sha512",
+        "nettopologysuite.nuspec"
+      ]
+    },
+    "NetTopologySuite.Features/2.1.0": {
+      "sha512": "Iq+Ie9WZJj8Pyu3asHZ/UwZLim786QzWC0DmLEzFK2u3BeLHDK7iWfsYBLDb/RCBUql8VBmW6LMlsJ+LKUHduA==",
+      "type": "package",
+      "path": "nettopologysuite.features/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/NetTopologySuite.Features.dll",
+        "lib/netstandard2.0/NetTopologySuite.Features.xml",
+        "nettopologysuite.features.2.1.0.nupkg.sha512",
+        "nettopologysuite.features.nuspec"
+      ]
+    },
+    "NetTopologySuite.IO.GeoJSON4STJ/4.0.0": {
+      "sha512": "Jdm9qBVDcHkrVn3fm3knw6pGu3Ggn31tGVRyIP1/5HSL+8EDPfUnEZF0+oVFBkOKR9tqu9aV2jmEX42Kq8F2Yw==",
+      "type": "package",
+      "path": "nettopologysuite.io.geojson4stj/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll",
+        "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.xml",
+        "nettopologysuite.io.geojson4stj.4.0.0.nupkg.sha512",
+        "nettopologysuite.io.geojson4stj.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.4": {
       "sha512": "pdgNNMai3zv51W5aq268sujXUyx7SNdE2bj1wZcWjAQrKMFZV260lbqYop1d2GM67JI1huLRwxo9ZqnfF/lC6A==",
       "type": "package",
@@ -1126,6 +4076,373 @@
         "newtonsoft.json.13.0.4.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "ShimSkiaSharp/1.0.0.3": {
+      "sha512": "xIvruo8cU+APpa2v4cYYuWt8vml2oI8cxilJrozisgNniPn9ZSugluI93ld+R+R0SDLHvwakVgk9rH+os+2uCw==",
+      "type": "package",
+      "path": "shimskiasharp/1.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/ShimSkiaSharp.dll",
+        "lib/netstandard2.0/ShimSkiaSharp.dll",
+        "shimskiasharp.1.0.0.3.nupkg.sha512",
+        "shimskiasharp.nuspec"
+      ]
+    },
+    "SkiaSharp/2.88.9": {
+      "sha512": "3MD5VHjXXieSHCleRLuaTXmL2pD0mB7CcOB1x2kA1I4bhptf4e3R27iM93264ZYuAq6mkUyX5XbcxnZvMJYc1Q==",
+      "type": "package",
+      "path": "skiasharp/2.88.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "interactive-extensions/dotnet/SkiaSharp.DotNet.Interactive.dll",
+        "lib/monoandroid1.0/SkiaSharp.dll",
+        "lib/monoandroid1.0/SkiaSharp.pdb",
+        "lib/monoandroid1.0/SkiaSharp.xml",
+        "lib/net462/SkiaSharp.dll",
+        "lib/net462/SkiaSharp.pdb",
+        "lib/net462/SkiaSharp.xml",
+        "lib/net6.0-android30.0/SkiaSharp.dll",
+        "lib/net6.0-android30.0/SkiaSharp.pdb",
+        "lib/net6.0-android30.0/SkiaSharp.xml",
+        "lib/net6.0-ios13.6/SkiaSharp.dll",
+        "lib/net6.0-ios13.6/SkiaSharp.pdb",
+        "lib/net6.0-ios13.6/SkiaSharp.xml",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.dll",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.pdb",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.xml",
+        "lib/net6.0-macos10.15/SkiaSharp.dll",
+        "lib/net6.0-macos10.15/SkiaSharp.pdb",
+        "lib/net6.0-macos10.15/SkiaSharp.xml",
+        "lib/net6.0-tizen7.0/SkiaSharp.dll",
+        "lib/net6.0-tizen7.0/SkiaSharp.pdb",
+        "lib/net6.0-tizen7.0/SkiaSharp.xml",
+        "lib/net6.0-tvos13.4/SkiaSharp.dll",
+        "lib/net6.0-tvos13.4/SkiaSharp.pdb",
+        "lib/net6.0-tvos13.4/SkiaSharp.xml",
+        "lib/net6.0/SkiaSharp.dll",
+        "lib/net6.0/SkiaSharp.pdb",
+        "lib/net6.0/SkiaSharp.xml",
+        "lib/netcoreapp3.1/SkiaSharp.dll",
+        "lib/netcoreapp3.1/SkiaSharp.pdb",
+        "lib/netcoreapp3.1/SkiaSharp.xml",
+        "lib/netstandard1.3/SkiaSharp.dll",
+        "lib/netstandard1.3/SkiaSharp.pdb",
+        "lib/netstandard1.3/SkiaSharp.xml",
+        "lib/netstandard2.0/SkiaSharp.dll",
+        "lib/netstandard2.0/SkiaSharp.pdb",
+        "lib/netstandard2.0/SkiaSharp.xml",
+        "lib/netstandard2.1/SkiaSharp.dll",
+        "lib/netstandard2.1/SkiaSharp.pdb",
+        "lib/netstandard2.1/SkiaSharp.xml",
+        "lib/tizen40/SkiaSharp.dll",
+        "lib/tizen40/SkiaSharp.pdb",
+        "lib/tizen40/SkiaSharp.xml",
+        "lib/uap10.0.10240/SkiaSharp.dll",
+        "lib/uap10.0.10240/SkiaSharp.pdb",
+        "lib/uap10.0.10240/SkiaSharp.xml",
+        "lib/uap10.0.16299/SkiaSharp.dll",
+        "lib/uap10.0.16299/SkiaSharp.pdb",
+        "lib/uap10.0.16299/SkiaSharp.xml",
+        "lib/xamarinios1.0/SkiaSharp.dll",
+        "lib/xamarinios1.0/SkiaSharp.pdb",
+        "lib/xamarinios1.0/SkiaSharp.xml",
+        "lib/xamarinmac2.0/SkiaSharp.dll",
+        "lib/xamarinmac2.0/SkiaSharp.pdb",
+        "lib/xamarinmac2.0/SkiaSharp.xml",
+        "lib/xamarintvos1.0/SkiaSharp.dll",
+        "lib/xamarintvos1.0/SkiaSharp.pdb",
+        "lib/xamarintvos1.0/SkiaSharp.xml",
+        "lib/xamarinwatchos1.0/SkiaSharp.dll",
+        "lib/xamarinwatchos1.0/SkiaSharp.pdb",
+        "lib/xamarinwatchos1.0/SkiaSharp.xml",
+        "skiasharp.2.88.9.nupkg.sha512",
+        "skiasharp.nuspec"
+      ]
+    },
+    "SkiaSharp.HarfBuzz/2.88.9": {
+      "sha512": "5lyjX04CSWTKFYMSNN6SMupV2qzYDr8W/u8S3ZEkr+Sg3kOi0YE06EOqG0tzn/YPBID89xam4L3rz3hUUKOGEQ==",
+      "type": "package",
+      "path": "skiasharp.harfbuzz/2.88.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net462/SkiaSharp.HarfBuzz.dll",
+        "lib/net462/SkiaSharp.HarfBuzz.pdb",
+        "lib/net462/SkiaSharp.HarfBuzz.xml",
+        "lib/net6.0/SkiaSharp.HarfBuzz.dll",
+        "lib/net6.0/SkiaSharp.HarfBuzz.pdb",
+        "lib/net6.0/SkiaSharp.HarfBuzz.xml",
+        "lib/netcoreapp3.1/SkiaSharp.HarfBuzz.dll",
+        "lib/netcoreapp3.1/SkiaSharp.HarfBuzz.pdb",
+        "lib/netcoreapp3.1/SkiaSharp.HarfBuzz.xml",
+        "lib/netstandard1.3/SkiaSharp.HarfBuzz.dll",
+        "lib/netstandard1.3/SkiaSharp.HarfBuzz.pdb",
+        "lib/netstandard1.3/SkiaSharp.HarfBuzz.xml",
+        "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll",
+        "lib/netstandard2.0/SkiaSharp.HarfBuzz.pdb",
+        "lib/netstandard2.0/SkiaSharp.HarfBuzz.xml",
+        "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll",
+        "lib/netstandard2.1/SkiaSharp.HarfBuzz.pdb",
+        "lib/netstandard2.1/SkiaSharp.HarfBuzz.xml",
+        "skiasharp.harfbuzz.2.88.9.nupkg.sha512",
+        "skiasharp.harfbuzz.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.iOS/2.88.9": {
+      "sha512": "WX97CFiCZSxG7mM3U6zf3rKW2gJHRe18mA0bwkQ8iU/+PYJailNvcXH878XuEigXHfWO+73UJM8Ivw4CWtC60w==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.ios/2.88.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net6.0-ios13.6/SkiaSharp.NativeAssets.iOS.targets",
+        "build/xamarinios1.0/SkiaSharp.NativeAssets.iOS.targets",
+        "buildTransitive/net6.0-ios13.6/SkiaSharp.NativeAssets.iOS.targets",
+        "buildTransitive/xamarinios1.0/SkiaSharp.NativeAssets.iOS.targets",
+        "lib/net6.0-ios13.6/_._",
+        "lib/xamarinios1.0/_._",
+        "runtimes/ios/native/libSkiaSharp.framework/Info.plist",
+        "runtimes/ios/native/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "runtimes/ios/native/libSkiaSharp.framework/libSkiaSharp",
+        "runtimes/iossimulator/native/libSkiaSharp.framework/Info.plist",
+        "runtimes/iossimulator/native/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "runtimes/iossimulator/native/libSkiaSharp.framework/libSkiaSharp",
+        "skiasharp.nativeassets.ios.2.88.9.nupkg.sha512",
+        "skiasharp.nativeassets.ios.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.Linux/2.88.9": {
+      "sha512": "cWSaJKVPWAaT/WIn9c8T5uT/l4ETwHxNJTkEOtNKjphNo8AW6TF9O32aRkxqw3l8GUdUo66Bu7EiqtFh/XG0Zg==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.linux/2.88.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/SkiaSharp.NativeAssets.Linux.targets",
+        "buildTransitive/net462/SkiaSharp.NativeAssets.Linux.targets",
+        "lib/net462/_._",
+        "lib/net6.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "runtimes/linux-arm/native/libSkiaSharp.so",
+        "runtimes/linux-arm64/native/libSkiaSharp.so",
+        "runtimes/linux-musl-x64/native/libSkiaSharp.so",
+        "runtimes/linux-x64/native/libSkiaSharp.so",
+        "skiasharp.nativeassets.linux.2.88.9.nupkg.sha512",
+        "skiasharp.nativeassets.linux.nuspec"
+      ]
+    },
+    "SkiaSharp.Views/2.88.9": {
+      "sha512": "vPT2hfRpan8RyeWWFcpyu+rEBhYl2RTUS4t/P4eXloJNejweRr603/jvcIjSZpacOLG3NVDA9e9PFMMSeNkZsQ==",
+      "type": "package",
+      "path": "skiasharp.views/2.88.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/monoandroid1.0/SkiaSharp.Views.Android.dll",
+        "lib/monoandroid1.0/SkiaSharp.Views.Android.pdb",
+        "lib/monoandroid1.0/SkiaSharp.Views.Android.xml",
+        "lib/net462/SkiaSharp.Views.Desktop.dll",
+        "lib/net462/SkiaSharp.Views.Desktop.pdb",
+        "lib/net462/SkiaSharp.Views.Desktop.xml",
+        "lib/net6.0-android30.0/SkiaSharp.Views.Android.aar",
+        "lib/net6.0-android30.0/SkiaSharp.Views.Android.dll",
+        "lib/net6.0-android30.0/SkiaSharp.Views.Android.pdb",
+        "lib/net6.0-android30.0/SkiaSharp.Views.Android.xml",
+        "lib/net6.0-ios13.6/SkiaSharp.Views.iOS.dll",
+        "lib/net6.0-ios13.6/SkiaSharp.Views.iOS.pdb",
+        "lib/net6.0-ios13.6/SkiaSharp.Views.iOS.xml",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.Views.iOS.dll",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.Views.iOS.pdb",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.Views.iOS.xml",
+        "lib/net6.0-macos10.15/SkiaSharp.Views.Mac.dll",
+        "lib/net6.0-macos10.15/SkiaSharp.Views.Mac.pdb",
+        "lib/net6.0-macos10.15/SkiaSharp.Views.Mac.xml",
+        "lib/net6.0-tizen7.0/SkiaSharp.Views.Tizen.dll",
+        "lib/net6.0-tizen7.0/SkiaSharp.Views.Tizen.pdb",
+        "lib/net6.0-tizen7.0/SkiaSharp.Views.Tizen.xml",
+        "lib/net6.0-tvos13.4/SkiaSharp.Views.tvOS.dll",
+        "lib/net6.0-tvos13.4/SkiaSharp.Views.tvOS.pdb",
+        "lib/net6.0-tvos13.4/SkiaSharp.Views.tvOS.xml",
+        "lib/tizen40/SkiaSharp.Views.Tizen.dll",
+        "lib/tizen40/SkiaSharp.Views.Tizen.pdb",
+        "lib/tizen40/SkiaSharp.Views.Tizen.xml",
+        "lib/uap10.0/SkiaSharp.Views.UWP.dll",
+        "lib/uap10.0/SkiaSharp.Views.UWP.pdb",
+        "lib/uap10.0/SkiaSharp.Views.UWP.xml",
+        "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll",
+        "lib/xamarinios1.0/SkiaSharp.Views.iOS.pdb",
+        "lib/xamarinios1.0/SkiaSharp.Views.iOS.xml",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Mac.dll",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Mac.pdb",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Mac.xml",
+        "lib/xamarintvos1.0/SkiaSharp.Views.tvOS.dll",
+        "lib/xamarintvos1.0/SkiaSharp.Views.tvOS.pdb",
+        "lib/xamarintvos1.0/SkiaSharp.Views.tvOS.xml",
+        "lib/xamarinwatchos1.0/SkiaSharp.Views.watchOS.dll",
+        "lib/xamarinwatchos1.0/SkiaSharp.Views.watchOS.pdb",
+        "lib/xamarinwatchos1.0/SkiaSharp.Views.watchOS.xml",
+        "skiasharp.views.2.88.9.nupkg.sha512",
+        "skiasharp.views.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.Forms/2.88.9": {
+      "sha512": "jKisfd9+q1zbrETaEN9ytlAMozkNGGVLHhjyfL9tGLsCCWgS1s6C7mR4/GoWJ0wzZbtSalPcIjY0OmYsorQ1MA==",
+      "type": "package",
+      "path": "skiasharp.views.forms/2.88.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "build/net462/SkiaSharp.Views.Forms.targets",
+        "build/netcoreapp3.1/SkiaSharp.Views.Forms.targets",
+        "lib/monoandroid1.0/SkiaSharp.Views.Forms.dll",
+        "lib/monoandroid1.0/SkiaSharp.Views.Forms.pdb",
+        "lib/monoandroid1.0/SkiaSharp.Views.Forms.xml",
+        "lib/net462/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/tizen40/SkiaSharp.Views.Forms.dll",
+        "lib/tizen40/SkiaSharp.Views.Forms.pdb",
+        "lib/tizen40/SkiaSharp.Views.Forms.xml",
+        "lib/uap10.0/SkiaSharp.Views.Forms.dll",
+        "lib/uap10.0/SkiaSharp.Views.Forms.pdb",
+        "lib/uap10.0/SkiaSharp.Views.Forms.xml",
+        "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll",
+        "lib/xamarinios1.0/SkiaSharp.Views.Forms.pdb",
+        "lib/xamarinios1.0/SkiaSharp.Views.Forms.xml",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Forms.dll",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Forms.pdb",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Forms.xml",
+        "ref/monoandroid1.0/SkiaSharp.Views.Forms.dll",
+        "ref/monoandroid1.0/SkiaSharp.Views.Forms.pdb",
+        "ref/monoandroid1.0/SkiaSharp.Views.Forms.xml",
+        "ref/net462/_._",
+        "ref/netcoreapp3.1/_._",
+        "ref/netstandard1.3/SkiaSharp.Views.Forms.dll",
+        "ref/netstandard1.3/SkiaSharp.Views.Forms.pdb",
+        "ref/netstandard1.3/SkiaSharp.Views.Forms.xml",
+        "ref/netstandard2.0/SkiaSharp.Views.Forms.dll",
+        "ref/netstandard2.0/SkiaSharp.Views.Forms.pdb",
+        "ref/netstandard2.0/SkiaSharp.Views.Forms.xml",
+        "ref/tizen40/SkiaSharp.Views.Forms.dll",
+        "ref/tizen40/SkiaSharp.Views.Forms.pdb",
+        "ref/tizen40/SkiaSharp.Views.Forms.xml",
+        "ref/uap10.0/SkiaSharp.Views.Forms.dll",
+        "ref/uap10.0/SkiaSharp.Views.Forms.pdb",
+        "ref/uap10.0/SkiaSharp.Views.Forms.xml",
+        "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll",
+        "ref/xamarinios1.0/SkiaSharp.Views.Forms.pdb",
+        "ref/xamarinios1.0/SkiaSharp.Views.Forms.xml",
+        "ref/xamarinmac2.0/SkiaSharp.Views.Forms.dll",
+        "ref/xamarinmac2.0/SkiaSharp.Views.Forms.pdb",
+        "ref/xamarinmac2.0/SkiaSharp.Views.Forms.xml",
+        "skiasharp.views.forms.2.88.9.nupkg.sha512",
+        "skiasharp.views.forms.nuspec"
+      ]
+    },
+    "Svg.Custom/1.0.0.3": {
+      "sha512": "QjbtwFhnv7cxf3GkRBMe9fjwJ8NmD/q+f2UdNQa5lO6MypYxi9p93gb58koTaQvUvVzO6/tM7Zx/KFwnD6Fblg==",
+      "type": "package",
+      "path": "svg.custom/1.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Svg.Custom.dll",
+        "lib/netstandard2.0/Svg.Custom.dll",
+        "svg.custom.1.0.0.3.nupkg.sha512",
+        "svg.custom.nuspec"
+      ]
+    },
+    "Svg.Model/1.0.0.3": {
+      "sha512": "JumLfSlV4bg5d+RO4zxW7yGx6eCqqJtAZ3VJHJA3QlH/lJvBc3kSQrNv/p9TF7atl56CR4wD14+DQ591Rnh6sg==",
+      "type": "package",
+      "path": "svg.model/1.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Svg.Model.dll",
+        "lib/netstandard2.0/Svg.Model.dll",
+        "svg.model.1.0.0.3.nupkg.sha512",
+        "svg.model.nuspec"
+      ]
+    },
+    "Svg.Skia/1.0.0.3": {
+      "sha512": "W786IMogol+VImiN6KgANvrZAprQ2Cb5UcaUFgCzwc4OXRxq/fviy1SyIU/X7svNmcWAq+ijzBKkgBQMVFtAhQ==",
+      "type": "package",
+      "path": "svg.skia/1.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Svg.Skia.dll",
+        "lib/netstandard2.0/Svg.Skia.dll",
+        "svg.skia.1.0.0.3.nupkg.sha512",
+        "svg.skia.nuspec"
+      ]
+    },
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "type": "package",
+      "path": "system.buffers/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.1.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Memory/4.5.4": {
+      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "type": "package",
+      "path": "system.memory/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
@@ -1173,6 +4490,215 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Text.Encoding.CodePages/8.0.0": {
+      "sha512": "OZIsVplFGaVY90G2SbpgU7EnCoOO5pw1t4ic21dBF3/1omrJFpAGoNAVpPyMVOC90/hvgkGG3VFqR13YgZMQfg==",
+      "type": "package",
+      "path": "system.text.encoding.codepages/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Text.Encoding.CodePages.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Text.Encoding.CodePages.dll",
+        "lib/net462/System.Text.Encoding.CodePages.xml",
+        "lib/net6.0/System.Text.Encoding.CodePages.dll",
+        "lib/net6.0/System.Text.Encoding.CodePages.xml",
+        "lib/net7.0/System.Text.Encoding.CodePages.dll",
+        "lib/net7.0/System.Text.Encoding.CodePages.xml",
+        "lib/net8.0/System.Text.Encoding.CodePages.dll",
+        "lib/net8.0/System.Text.Encoding.CodePages.xml",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.xml",
+        "system.text.encoding.codepages.8.0.0.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Text.Encodings.Web/6.0.0": {
+      "sha512": "Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
+      "type": "package",
+      "path": "system.text.encodings.web/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Text.Encodings.Web.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Text.Encodings.Web.dll",
+        "lib/net461/System.Text.Encodings.Web.xml",
+        "lib/net6.0/System.Text.Encodings.Web.dll",
+        "lib/net6.0/System.Text.Encodings.Web.xml",
+        "lib/netcoreapp3.1/System.Text.Encodings.Web.dll",
+        "lib/netcoreapp3.1/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
+        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.6.0.0.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Text.Json/6.0.3": {
+      "sha512": "1Bi8pSdTTVNVKcGFiU1o9Iq6FwFyGQmgBgGHxy9pPvZANXc1cT6D72j+r/H/NsyVnWxKIxOgI3o7DrAwC3zcaA==",
+      "type": "package",
+      "path": "system.text.json/6.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn3.11/cs/System.Text.Json.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/de/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/es/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/fr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/it/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ja/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ko/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pl/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ru/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/tr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn4.0/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/de/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/es/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/fr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/it/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ja/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ko/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pl/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ru/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/tr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
+        "build/System.Text.Json.targets",
+        "buildTransitive/netcoreapp2.0/System.Text.Json.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/net6.0/System.Text.Json.dll",
+        "lib/net6.0/System.Text.Json.xml",
+        "lib/netcoreapp3.1/System.Text.Json.dll",
+        "lib/netcoreapp3.1/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.6.0.3.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Topten.RichTextKit/0.4.166": {
+      "sha512": "QJiqzi31Cd/QrinlAKvqiqIe0GOLijCcBCnLDHYXpOsJ5CmV4VtbUNAZ4a5VErhlInwX4gkMVsfb1ZRR8o1fdA==",
+      "type": "package",
+      "path": "topten.richtextkit/0.4.166",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Topten.RichTextKit.dll",
+        "lib/net462/Topten.RichTextKit.pdb",
+        "lib/net462/Topten.RichTextKit.xml",
+        "lib/net5.0/Topten.RichTextKit.dll",
+        "lib/net5.0/Topten.RichTextKit.pdb",
+        "lib/net5.0/Topten.RichTextKit.xml",
+        "lib/netcoreapp2.1/Topten.RichTextKit.dll",
+        "lib/netcoreapp2.1/Topten.RichTextKit.pdb",
+        "lib/netcoreapp2.1/Topten.RichTextKit.xml",
+        "lib/netstandard2.0/Topten.RichTextKit.dll",
+        "lib/netstandard2.0/Topten.RichTextKit.pdb",
+        "lib/netstandard2.0/Topten.RichTextKit.xml",
+        "nuget-icon.png",
+        "topten.richtextkit.0.4.166.nupkg.sha512",
+        "topten.richtextkit.nuspec"
       ]
     },
     "Xamarin.CommunityToolkit/2.0.6": {
@@ -1476,6 +5002,42 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.Forms.Maps/5.0.0.2662": {
+      "sha512": "99WMS9HWLKuQHWBj29yf7NIbbICcwtRIpVdO/5WEdUHlZxKw+LCcUKM2/5vtNwvJmFFFqBf04fmMoL4+xEvNOQ==",
+      "type": "package",
+      "path": "xamarin.forms.maps/5.0.0.2662",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Assets/xamarin_128x128.png",
+        "Licenses/LICENSE",
+        "Licenses/THIRD-PARTY-NOTICES.txt",
+        "lib/MonoAndroid13.0/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid13.0/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid13.0/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.macOS.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.xml",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.xml",
+        "lib/tizen40/Xamarin.Forms.Maps.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.xml",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.dll",
+        "xamarin.forms.maps.5.0.0.2662.nupkg.sha512",
+        "xamarin.forms.maps.nuspec"
+      ]
+    },
     "XamarinPractice/1.0.0": {
       "type": "project",
       "path": "../XamarinPractice/XamarinPractice.csproj",
@@ -1484,10 +5046,13 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "Mapsui.Forms >= 4.1.9",
       "Newtonsoft.Json >= 13.0.4",
+      "System.Memory >= 4.5.4",
       "Xamarin.CommunityToolkit >= 2.0.6",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2662",
+      "Xamarin.Forms.Maps >= 5.0.0.2662",
       "XamarinPractice >= 1.0.0"
     ]
   },
@@ -1539,9 +5104,18 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "Mapsui.Forms": {
+            "target": "Package",
+            "version": "[4.1.9, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.4, )"
+          },
+          "System.Memory": {
+            "include": "None",
+            "target": "Package",
+            "version": "[4.5.4, )"
           },
           "Xamarin.CommunityToolkit": {
             "target": "Package",
@@ -1552,6 +5126,10 @@
             "version": "[1.7.0, )"
           },
           "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[5.0.0.2662, )"
+          },
+          "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "[5.0.0.2662, )"
           }
@@ -1572,5 +5150,21 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Passage à une version antérieure du package détecté : System.Memory de 4.5.5 à 4.5.4. Référencez le package directement à partir du projet pour sélectionner une version différente. \r\n XamarinPractice.iOS -> Mapsui.Forms 4.1.9 -> System.Memory (>= 4.5.5 && < 5.0.0) \r\n XamarinPractice.iOS -> System.Memory (>= 4.5.4)",
+      "libraryId": "System.Memory",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-arm64",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

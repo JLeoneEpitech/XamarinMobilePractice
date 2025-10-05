@@ -4,6 +4,9 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
+using Xamarin.Forms.Maps;
 
 namespace XamarinPractice.Droid
 {
@@ -16,6 +19,7 @@ namespace XamarinPractice.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

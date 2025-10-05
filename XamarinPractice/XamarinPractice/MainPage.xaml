@@ -22,7 +22,8 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Padding="10">
-                            <Label Text="{Binding .}" />
+                            <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18" />
+                            <Label Text="{Binding Body}" FontSize="14" LineBreakMode="TailTruncation" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

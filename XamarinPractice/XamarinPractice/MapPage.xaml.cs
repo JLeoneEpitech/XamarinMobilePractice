@@ -12,6 +12,7 @@ using Mapsui.UI.Forms;
 using NetTopologySuite.Geometries;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace XamarinPractice
@@ -20,6 +21,13 @@ namespace XamarinPractice
     {
         private MPoint montpellier;
         private Random random = new Random();
+        private MemoryLayer pinLayer; // <- référence globale
+        private List<(Post post, double lat, double lon)> postsWithCoords = new List<(Post post, double lat, double lon)>();
+
+
+
+
+
 
         public MapPage()
         {
@@ -62,14 +70,53 @@ namespace XamarinPractice
 
             // Ajoute les pins
             AddPins(map);
+
+            MapView.MapClicked += MapView_MapClicked;
+
+
+
         }
+        private double Distance(double lat1, double lon1, double lat2, double lon2)
+        {
+            double dLat = lat1 - lat2;
+            double dLon = lon1 - lon2;
+            return Math.Sqrt(dLat * dLat + dLon * dLon);
+        }
+        private async void MapView_MapClicked(object sender, MapClickedEventArgs e)
+        {
+            Console.WriteLine("----------------EVENT CLICK----------------");
+
+            // Coordonnées du clic en "monde réel"
+            double clickLat = e.Point.Latitude;
+            double clickLon = e.Point.Longitude;
+            
+            //DEBUGUER CLOSEST CLICK
+
+            // On prend le post le plus proche
+            var closestPost = postsWithCoords
+                .OrderBy(p => Distance(clickLat, clickLon, p.lat, p.lon))
+                .First()
+                .post;
+
+            DisplayAlert(closestPost.Title, closestPost.Body, "OK");
+        }
+    
         private void AddPins(Map map)
         {
-            var posts = new List<string>
-    {
-        "Post 1","Post 2","Post 3","Post 4","Post 5",
-        "Post 6","Post 7","Post 8","Post 9","Post 10"
-    };
+            var posts = new List<Post>
+            {
+                new Post { Title = "Post 1", Body = "Body 1" },
+                new Post { Title = "Post 2", Body = "Body 2" },
+                new Post { Title = "Post 3", Body = "Body 3" },
+                new Post { Title = "Post 4", Body = "Body 4" },
+                new Post { Title = "Post 5", Body = "Body 5" },
+                new Post { Title = "Post 6", Body = "Body 6" },
+                new Post { Title = "Post 7", Body = "Body 7" },
+                new Post { Title = "Post 8", Body = "Body 8" },
+                new Post { Title = "Post 9", Body = "Body 9" },
+                new Post { Title = "Post 10", Body = "Body 10" },
+
+            };
 
             var features = new List<IFeature>();
 
@@ -78,10 +125,16 @@ namespace XamarinPractice
                 var offsetX = (random.NextDouble() - 0.5) * 5000;
                 var offsetY = (random.NextDouble() - 0.5) * 5000;
 
+
+
                 var point = new NetTopologySuite.Geometries.Point(montpellier.X + offsetX, montpellier.Y + offsetY);
 
+                postsWithCoords.Add((post, point.X, point.Y));
 
                 var feature = new GeometryFeature { Geometry = point };
+                // Ajoute les infos du post
+                feature["Title"] = post.Title;
+                feature["Body"] = post.Body;
                 feature.Styles.Add(new SymbolStyle
                 {
                     SymbolType = SymbolType.Ellipse,
@@ -94,7 +147,7 @@ namespace XamarinPractice
                 features.Add(feature);
             }
 
-            var pinLayer = new MemoryLayer
+             pinLayer = new MemoryLayer
             {
                 Name = "Posts",
                 Features = features   
