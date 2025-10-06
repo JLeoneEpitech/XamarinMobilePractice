@@ -56,8 +56,16 @@ namespace XamarinPractice
             map.Layers.Add(topoLayer);
 
             // Coordonnées de Montpellier
+            Console.WriteLine("Initialisation Coordonée Montpellier");
+            Console.WriteLine("Sphérification");
+
             var lonLat = SphericalMercator.FromLonLat(3.8777, 43.6119);
+
+           
+
             montpellier = new MPoint(lonLat.x, lonLat.y);
+           
+
 
             // Vue initiale
             map.Home = n =>
@@ -84,23 +92,51 @@ namespace XamarinPractice
         }
         private async void MapView_MapClicked(object sender, MapClickedEventArgs e)
         {
-            Console.WriteLine("----------------EVENT CLICK----------------");
 
             // Coordonnées du clic en "monde réel"
             double clickLat = e.Point.Latitude;
             double clickLon = e.Point.Longitude;
+
+            if (postsWithCoords.Count == 0)
+                return;
+
+            (Post post, double lat, double lon) nearestPost = postsWithCoords[0];
+            double minDistance = GetDistance(clickLat, clickLon, nearestPost.lat, nearestPost.lon);
+
+            foreach (var p in postsWithCoords)
+            {
+                double distance = GetDistance(clickLat, clickLon, p.lat, p.lon);
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    nearestPost = p;
+                }
+            }
+            if (minDistance <= 100)
+            {
+                await DisplayAlert(nearestPost.post.Title, nearestPost.post.Body, "OK");
+            }
+            Console.WriteLine($"Post le plus proche : {nearestPost.post.Title}, Distance : {minDistance} mètres");
             
-            //DEBUGUER CLOSEST CLICK
 
-            // On prend le post le plus proche
-            var closestPost = postsWithCoords
-                .OrderBy(p => Distance(clickLat, clickLon, p.lat, p.lon))
-                .First()
-                .post;
-
-            DisplayAlert(closestPost.Title, closestPost.Body, "OK");
         }
-    
+        // Méthode Haversine pour calculer la distance entre 2 points GPS
+        private double GetDistance(double lat1, double lon1, double lat2, double lon2)
+        {
+            double R = 6371e3; // Rayon de la Terre en mètres
+            double phi1 = lat1 * Math.PI / 180;
+            double phi2 = lat2 * Math.PI / 180;
+            double deltaPhi = (lat2 - lat1) * Math.PI / 180;
+            double deltaLambda = (lon2 - lon1) * Math.PI / 180;
+
+            double a = Math.Sin(deltaPhi / 2) * Math.Sin(deltaPhi / 2) +
+                       Math.Cos(phi1) * Math.Cos(phi2) *
+                       Math.Sin(deltaLambda / 2) * Math.Sin(deltaLambda / 2);
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+
+            return R * c; // distance en mètres
+        }
+
         private void AddPins(Map map)
         {
             var posts = new List<Post>
@@ -124,12 +160,13 @@ namespace XamarinPractice
             {
                 var offsetX = (random.NextDouble() - 0.5) * 5000;
                 var offsetY = (random.NextDouble() - 0.5) * 5000;
-
-
-
+            
+                //Création du point Topology
                 var point = new NetTopologySuite.Geometries.Point(montpellier.X + offsetX, montpellier.Y + offsetY);
 
-                postsWithCoords.Add((post, point.X, point.Y));
+                //Convert Mercator mettric (for map) to long lat for coordonées
+                var latLon = SphericalMercator.ToLonLat(point.X, point.Y);
+                postsWithCoords.Add((post, latLon.lat, latLon.lon));
 
                 var feature = new GeometryFeature { Geometry = point };
                 // Ajoute les infos du post
