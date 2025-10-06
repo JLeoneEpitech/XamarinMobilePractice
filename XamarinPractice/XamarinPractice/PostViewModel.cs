@@ -13,6 +13,9 @@ namespace XamarinPractice
     {
         public ObservableCollection<Post> Posts { get; } = new ObservableCollection<Post>();
 
+        public ICommand OpenMapCommand { get; }
+
+
         private Post _selectedPost;
         public Post SelectedPost
         {
@@ -30,7 +33,9 @@ namespace XamarinPractice
 
         public PostViewModel()
         {
+
             LoadPostsAsync();
+            OpenMapCommand = new Command(OnOpenMap);
         }
 
         private async Task LoadPostsAsync()
@@ -41,7 +46,11 @@ namespace XamarinPractice
             foreach (var post in postsFromApi.Take(10)) //Limited to 10 to avoid lagging emulator
                 Posts.Add(post);
         }
-
+        private async void OnOpenMap()
+        {
+            // Navigation via Application.Current.MainPage
+            await Application.Current.MainPage.Navigation.PushAsync(new MapPage(this));
+        }
         private async void OnPostTapped(Post post)
         {
             if (post != null)

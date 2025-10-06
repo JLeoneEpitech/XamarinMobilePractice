@@ -27,11 +27,15 @@ namespace XamarinPractice
 
 
 
+        private PostViewModel viewModel;
 
 
-        public MapPage()
+        public MapPage(PostViewModel vm)
         {
             InitializeComponent();
+
+            viewModel = vm;
+
 
             // Crée la carte
             var map = new Map
@@ -56,17 +60,9 @@ namespace XamarinPractice
             map.Layers.Add(topoLayer);
 
             // Coordonnées de Montpellier
-            Console.WriteLine("Initialisation Coordonée Montpellier");
-            Console.WriteLine("Sphérification");
-
             var lonLat = SphericalMercator.FromLonLat(3.8777, 43.6119);
-
-           
-
             montpellier = new MPoint(lonLat.x, lonLat.y);
            
-
-
             // Vue initiale
             map.Home = n =>
             {
@@ -77,7 +73,7 @@ namespace XamarinPractice
             MapView.Map = map;
 
             // Ajoute les pins
-            AddPins(map);
+            AddPinsFromViewModel(map);
 
             MapView.MapClicked += MapView_MapClicked;
 
@@ -137,27 +133,32 @@ namespace XamarinPractice
             return R * c; // distance en mètres
         }
 
-        private void AddPins(Map map)
+        private void AddPinsFromViewModel(Map map)
         {
-            var posts = new List<Post>
-            {
-                new Post { Title = "Post 1", Body = "Body 1" },
-                new Post { Title = "Post 2", Body = "Body 2" },
-                new Post { Title = "Post 3", Body = "Body 3" },
-                new Post { Title = "Post 4", Body = "Body 4" },
-                new Post { Title = "Post 5", Body = "Body 5" },
-                new Post { Title = "Post 6", Body = "Body 6" },
-                new Post { Title = "Post 7", Body = "Body 7" },
-                new Post { Title = "Post 8", Body = "Body 8" },
-                new Post { Title = "Post 9", Body = "Body 9" },
-                new Post { Title = "Post 10", Body = "Body 10" },
+            if (viewModel.Posts.Count == 0) return;
 
-            };
+
+            //var posts = new List<Post>
+            //{
+            //    new Post { Title = "Post 1", Body = "Body 1" },
+            //    new Post { Title = "Post 2", Body = "Body 2" },
+            //    new Post { Title = "Post 3", Body = "Body 3" },
+            //    new Post { Title = "Post 4", Body = "Body 4" },
+            //    new Post { Title = "Post 5", Body = "Body 5" },
+            //    new Post { Title = "Post 6", Body = "Body 6" },
+            //    new Post { Title = "Post 7", Body = "Body 7" },
+            //    new Post { Title = "Post 8", Body = "Body 8" },
+            //    new Post { Title = "Post 9", Body = "Body 9" },
+            //    new Post { Title = "Post 10", Body = "Body 10" },
+
+            //};
+
 
             var features = new List<IFeature>();
 
-            foreach (var post in posts)
+            foreach (var post in viewModel.Posts)
             {
+                // Génère un offset aléatoire autour de Montpellier
                 var offsetX = (random.NextDouble() - 0.5) * 5000;
                 var offsetY = (random.NextDouble() - 0.5) * 5000;
             
