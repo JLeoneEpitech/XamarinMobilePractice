@@ -23,19 +23,11 @@ namespace XamarinPractice
         private Random random = new Random();
         private MemoryLayer pinLayer; // <- référence globale
         private List<(Post post, double lat, double lon)> postsWithCoords = new List<(Post post, double lat, double lon)>();
-
-
-
-
         private PostViewModel viewModel;
 
-
-        public MapPage(PostViewModel vm)
+        public MapPage()
         {
             InitializeComponent();
-
-            viewModel = vm;
-
 
             // Crée la carte
             var map = new Map
@@ -72,14 +64,41 @@ namespace XamarinPractice
 
             MapView.Map = map;
 
-            // Ajoute les pins
-            AddPinsFromViewModel(map);
+      
 
             MapView.MapClicked += MapView_MapClicked;
 
 
 
         }
+        protected override void OnBindingContextChanged()
+        {
+            base.OnBindingContextChanged();
+
+            if (BindingContext is PostViewModel vm)
+            {
+                viewModel = vm;
+
+                // Ne jamais ajouter deux fois
+                vm.PostsLoaded -= Vm_PostsLoaded; // au cas où l’événement était déjà attaché
+                vm.PostsLoaded += Vm_PostsLoaded;
+
+                if (vm.Posts.Count > 0)
+                    AddPinsFromViewModel(MapView.Map);
+            }
+        }
+        private void Vm_PostsLoaded(object sender, EventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                // Vide l’ancienne couche si elle existe
+                if (pinLayer != null)
+                    MapView.Map.Layers.Remove(pinLayer);
+
+                AddPinsFromViewModel(MapView.Map);
+            });
+        }
+
         private double Distance(double lat1, double lon1, double lat2, double lon2)
         {
             double dLat = lat1 - lat2;
@@ -137,21 +156,7 @@ namespace XamarinPractice
         {
             if (viewModel.Posts.Count == 0) return;
 
-
-            //var posts = new List<Post>
-            //{
-            //    new Post { Title = "Post 1", Body = "Body 1" },
-            //    new Post { Title = "Post 2", Body = "Body 2" },
-            //    new Post { Title = "Post 3", Body = "Body 3" },
-            //    new Post { Title = "Post 4", Body = "Body 4" },
-            //    new Post { Title = "Post 5", Body = "Body 5" },
-            //    new Post { Title = "Post 6", Body = "Body 6" },
-            //    new Post { Title = "Post 7", Body = "Body 7" },
-            //    new Post { Title = "Post 8", Body = "Body 8" },
-            //    new Post { Title = "Post 9", Body = "Body 9" },
-            //    new Post { Title = "Post 10", Body = "Body 10" },
-
-            //};
+            postsWithCoords.Clear(); // obligatoire pour éviter les doublons
 
 
             var features = new List<IFeature>();

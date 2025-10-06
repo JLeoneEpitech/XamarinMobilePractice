@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -31,6 +32,8 @@ namespace XamarinPractice
             }
         }
 
+        //  Événement qui sera déclenché quand les posts sont chargés
+        public event EventHandler PostsLoaded;
         public PostViewModel()
         {
 
@@ -40,16 +43,26 @@ namespace XamarinPractice
 
         private async Task LoadPostsAsync()
         {
-            var client = new ApiClient();
-            var postsFromApi = await client.GetAsync<Post>("https://jsonplaceholder.typicode.com/posts");
+            try
+            {
+                var client = new ApiClient();
+                var postsFromApi = await client.GetAsync<Post>("https://jsonplaceholder.typicode.com/posts");
 
-            foreach (var post in postsFromApi.Take(10)) //Limited to 10 to avoid lagging emulator
-                Posts.Add(post);
+                foreach (var post in postsFromApi.Take(10)) //Limited to 10 to avoid lagging emulator
+                    Posts.Add(post);
+
+                // On avertit que les posts sont chargés
+                PostsLoaded?.Invoke(this, EventArgs.Empty);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Erreur de chargement des posts : {ex.Message}");
+            }
         }
         private async void OnOpenMap()
         {
             // Navigation via Application.Current.MainPage
-            await Application.Current.MainPage.Navigation.PushAsync(new MapPage(this));
+            await Application.Current.MainPage.Navigation.PushAsync(new MapPage());
         }
         private async void OnPostTapped(Post post)
         {

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinPractice"
+             x:Class="XamarinPractice.MainTabbedPage"
+             BarBackgroundColor="#ffffff"
+             BarTextColor="#000000">
+
+    <local:MainPage Title="Home" IconImageSource="home_icon.png" />
+    <local:MapPage Title="Map" IconImageSource="map_icon.png" />
+
+</TabbedPage>
