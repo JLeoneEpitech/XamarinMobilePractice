@@ -30,8 +30,5 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <Button Text="Voir la map" 
-        Command="{Binding OpenMapCommand}"
-        HorizontalOptions="Center"/>
     </StackLayout>
 </ContentPage>
